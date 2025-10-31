@@ -271,6 +271,7 @@ When users try to leave:
 8. ✅ Process Timeline
 9. ✅ Trust Badges Section
 10. ✅ Dark/Light Theme
+11. ✅ Pricing Calculator
 
 ### Phase 3: Marketing & Conversion (Ongoing)
 11. ✅ Analytics Setup
