@@ -1,5 +1,6 @@
 "use client"
 
+import { Instagram } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 import { getTranslation } from "@/lib/i18n"
 
@@ -10,7 +11,7 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-12 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-primary-foreground rounded-sm" />
@@ -42,6 +43,18 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">{t.followUs}</h4>
+            <a
+              href="https://www.instagram.com/barnea_woodworking?igsh=MW4zODZsaHhqb3U0ZA%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+            >
+              <Instagram className="w-5 h-5" />
+              <span>Instagram</span>
+            </a>
           </div>
           <div>
             <h4 className="font-semibold mb-4">{t.contact}</h4>
