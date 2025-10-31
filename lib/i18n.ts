@@ -88,6 +88,15 @@ export const translations = {
     mapTitle: "איך להגיע",
     getDirections: "נווט",
 
+    // Booking
+    bookingTitle: "הזמינו ייעוץ",
+    bookingSubtitle: "בחרו תאריך ושעה מתאימים לכם, ונתאם פגישה",
+    selectDate: "בחרו תאריך",
+    selectTime: "בחרו שעה",
+    pickDate: "לחצו לבחירת תאריך",
+    confirmBooking: "אישור הזמנה",
+    bookingNote: "אחרי האישור תועברו ל-WhatsApp לפרטים נוספים",
+
     // Footer
     footerText: "ברנע - סדנת נגרות משפחתית. החיים הם אמנות, אנחנו יוצרים אותה.",
     quickLinks: "קישורים מהירים",
@@ -172,6 +181,15 @@ export const translations = {
     hoursValue: "Mon-Thu: 9:00-18:00, Fri: 9:00-14:00",
     mapTitle: "Find Us",
     getDirections: "Get Directions",
+
+    // Booking
+    bookingTitle: "Book a Consultation",
+    bookingSubtitle: "Select a convenient date and time for your appointment",
+    selectDate: "Select Date",
+    selectTime: "Select Time",
+    pickDate: "Click to pick a date",
+    confirmBooking: "Confirm Booking",
+    bookingNote: "After confirmation, you'll be redirected to WhatsApp for details",
 
     // Footer
     footerText: "Barnea - Family carpentry workshop. Life is art, we make it.",
@@ -258,6 +276,15 @@ export const translations = {
     hoursValue: "Пн-Чт: 9:00-18:00, Пт: 9:00-14:00",
     mapTitle: "Как нас найти",
     getDirections: "Проложить маршрут",
+
+    // Booking
+    bookingTitle: "Записаться на консультацию",
+    bookingSubtitle: "Выберите удобные дату и время для встречи",
+    selectDate: "Выберите дату",
+    selectTime: "Выберите время",
+    pickDate: "Нажмите для выбора даты",
+    confirmBooking: "Подтвердить запись",
+    bookingNote: "После подтверждения вы будете перенаправлены в WhatsApp для уточнения деталей",
 
     // Footer
     footerText: "Барнеа - Семейная столярная мастерская. Жизнь — это искусство, мы его создаём.",
