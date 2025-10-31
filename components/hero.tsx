@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { Calendar } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 import { getTranslation } from "@/lib/i18n"
 
@@ -9,11 +9,16 @@ export function Hero() {
   const { locale } = useLocale()
   const t = getTranslation(locale)
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact")
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+  const openBooking = () => {
+    const whatsappPhone = "972545758003" // Eyal's phone in international format
+    const message = 
+      locale === "he"
+        ? "שלום! אני מעוניין/ת להזמין ייעוץ"
+        : locale === "en"
+          ? "Hello! I would like to book a consultation"
+          : "Здравствуйте! Я хотел бы записаться на консультацию"
+    const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
   }
 
   return (
@@ -28,9 +33,9 @@ export function Hero() {
           {t.heroSubtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" onClick={scrollToContact} className="text-base">
+          <Button size="lg" onClick={openBooking} className="text-base">
             {t.consultation}
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <Calendar className="ml-2 h-5 w-5" />
           </Button>
           <Button
             size="lg"
