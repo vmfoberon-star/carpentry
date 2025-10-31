@@ -274,10 +274,10 @@ When users try to leave:
 11. ✅ Pricing Calculator
 
 ### Phase 3: Marketing & Conversion (Ongoing)
-11. ✅ Analytics Setup
-12. ✅ Review Integration
-13. ⏳ Blog/Resources (Ready for integration)
-14. ⏳ Video Integration (Ready for integration)
+12. ✅ Analytics Setup
+13. ✅ Review Integration
+14. ⏳ Blog/Resources (Ready for integration)
+15. ⏳ Video Integration (Ready for integration)
 
 ## Tools & Resources
 
