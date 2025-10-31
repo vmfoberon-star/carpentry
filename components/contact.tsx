@@ -168,7 +168,7 @@ export function Contact() {
 
         {/* Google Maps */}
         <div className="mt-16">
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-4">
             <h3 className="text-2xl font-light">{t.mapTitle || "Find Us"}</h3>
             <Button variant="outline" size="sm" asChild>
               <a
