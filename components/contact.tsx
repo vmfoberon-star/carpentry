@@ -146,7 +146,14 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">{t.address}</p>
-                    <p className="text-muted-foreground">{t.addressValue}</p>
+                    <a 
+                      href="https://www.google.com/maps/search/?api=1&query=רחוב+הנגרים+15,+תל+אביב"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors underline"
+                    >
+                      {t.addressValue}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -156,6 +163,34 @@ export function Contact() {
               <h4 className="font-semibold mb-3">{t.hours}</h4>
               <p className="text-muted-foreground">{t.hoursValue}</p>
             </div>
+          </div>
+        </div>
+
+        {/* Google Maps */}
+        <div className="mt-16">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-2xl font-light">{t.mapTitle || "Find Us"}</h3>
+            <Button variant="outline" size="sm" asChild>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=רחוב+הנגרים+15,+תל+אביב"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t.getDirections || "Get Directions"}
+              </a>
+            </Button>
+          </div>
+          <div className="w-full h-96 rounded-lg overflow-hidden border border-border shadow-lg">
+            <iframe
+              src="https://www.google.com/maps?q=רחוב+הנגרים+15,+תל+אביב&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Workshop Location"
+            />
           </div>
         </div>
       </div>

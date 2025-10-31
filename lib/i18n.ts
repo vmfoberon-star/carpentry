@@ -85,6 +85,8 @@ export const translations = {
     emailValue: "barneawoodworking@gmail.com",
     hours: "שעות פעילות",
     hoursValue: "א׳-ה׳: 9:00-18:00, ו׳: 9:00-14:00",
+    mapTitle: "איך להגיע",
+    getDirections: "נווט",
 
     // Footer
     footerText: "ברנע - סדנת נגרות משפחתית. החיים הם אמנות, אנחנו יוצרים אותה.",
@@ -168,6 +170,8 @@ export const translations = {
     emailValue: "barneawoodworking@gmail.com",
     hours: "Working Hours",
     hoursValue: "Mon-Thu: 9:00-18:00, Fri: 9:00-14:00",
+    mapTitle: "Find Us",
+    getDirections: "Get Directions",
 
     // Footer
     footerText: "Barnea - Family carpentry workshop. Life is art, we make it.",
@@ -252,6 +256,8 @@ export const translations = {
     emailValue: "barneawoodworking@gmail.com",
     hours: "Часы работы",
     hoursValue: "Пн-Чт: 9:00-18:00, Пт: 9:00-14:00",
+    mapTitle: "Как нас найти",
+    getDirections: "Проложить маршрут",
 
     // Footer
     footerText: "Барнеа - Семейная столярная мастерская. Жизнь — это искусство, мы его создаём.",
