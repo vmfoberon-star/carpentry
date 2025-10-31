@@ -142,6 +142,16 @@ export const translations = {
     step5Title: "משלוח",
     step5Desc: "התקנה והסברים על תחזוקה וטיפול",
 
+    // Trust Badges
+    badgeYearsBusiness: "20+ שנים",
+    badgeExperienced: "ניסיון",
+    badgeQuality: "100% איכות",
+    badgeGuaranteed: "מאומת",
+    badgeSatisfaction: "300+ לקוחות",
+    badgeHappyClients: "מרוצים",
+    badgeProfessionalism: "100% מקצועי",
+    badgeCertified: "מוסמך",
+
     // Footer
     footerText: "ברנע - סדנת נגרות משפחתית. החיים הם אמנות, אנחנו יוצרים אותה.",
     quickLinks: "קישורים מהירים",
@@ -280,6 +290,16 @@ export const translations = {
     step4Desc: "Build period with regular updates on project progress",
     step5Title: "Delivery",
     step5Desc: "Installation and care instructions",
+
+    // Trust Badges
+    badgeYearsBusiness: "20+ Years",
+    badgeExperienced: "Experience",
+    badgeQuality: "100% Quality",
+    badgeGuaranteed: "Guaranteed",
+    badgeSatisfaction: "300+ Clients",
+    badgeHappyClients: "Satisfied",
+    badgeProfessionalism: "100% Professional",
+    badgeCertified: "Certified",
 
     // Footer
     footerText: "Barnea - Family carpentry workshop. Life is art, we make it.",
@@ -420,6 +440,16 @@ export const translations = {
     step4Desc: "Период создания с регулярными обновлениями о прогрессе",
     step5Title: "Доставка",
     step5Desc: "Установка и инструкции по уходу",
+
+    // Trust Badges
+    badgeYearsBusiness: "20+ лет",
+    badgeExperienced: "Опыта",
+    badgeQuality: "100% Качество",
+    badgeGuaranteed: "Гарантировано",
+    badgeSatisfaction: "300+ Клиентов",
+    badgeHappyClients: "Довольных",
+    badgeProfessionalism: "100% Профессионализм",
+    badgeCertified: "Сертифицировано",
 
     // Footer
     footerText: "Барнеа - Семейная столярная мастерская. Жизнь — это искусство, мы его создаём.",
