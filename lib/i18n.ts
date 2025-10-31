@@ -63,6 +63,12 @@ export const translations = {
 
     // Portfolio
     portfolioTitle: "העבודות שלנו",
+    filterAll: "הכל",
+    filterKitchen: "מטבח",
+    filterBedroom: "שינה",
+    filterBathroom: "אמבטיה",
+    filterStorage: "אחסון",
+    filterAccessories: "אביזרים",
     walkInCloset: "חדר הלבשה",
     walkInClosetDesc: "חדר הלבשה מרווח עם דלפק מגולף מעץ אלון.",
     kidsBunkBed: "מיטה דו-קומתית",
@@ -183,6 +189,12 @@ export const translations = {
 
     // Portfolio
     portfolioTitle: "Our Work",
+    filterAll: "All",
+    filterKitchen: "Kitchen",
+    filterBedroom: "Bedroom",
+    filterBathroom: "Bathroom",
+    filterStorage: "Storage",
+    filterAccessories: "Accessories",
     walkInCloset: "Walk-In Closet",
     walkInClosetDesc: "Spacious walk-in closet with carved oak vanity.",
     kidsBunkBed: "Kids Bunk Bed",
@@ -304,6 +316,12 @@ export const translations = {
 
     // Portfolio
     portfolioTitle: "Наши работы",
+    filterAll: "Все",
+    filterKitchen: "Кухня",
+    filterBedroom: "Спальня",
+    filterBathroom: "Ванная",
+    filterStorage: "Хранение",
+    filterAccessories: "Аксессуары",
     walkInCloset: "Гардеробная комната",
     walkInClosetDesc: "Просторная гардеробная с резной дубовой тумбой.",
     kidsBunkBed: "Двухъярусная кровать",

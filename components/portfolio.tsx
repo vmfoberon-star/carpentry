@@ -5,58 +5,82 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 import { getTranslation } from "@/lib/i18n"
 
+type Category = "all" | "kitchen" | "bedroom" | "bathroom" | "storage" | "accessories"
+
 export function Portfolio() {
   const { locale } = useLocale()
   const t = getTranslation(locale)
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const [activeFilter, setActiveFilter] = useState<Category>("all")
 
   const portfolioItems = [
     {
       title: t.walkInCloset,
       description: t.walkInClosetDesc,
       image: "/gallery/walk-in-closet.jpg",
+      category: "storage" as Category,
     },
     {
       title: t.kidsBunkBed,
       description: t.kidsBunkBedDesc,
       image: "/gallery/kids-bunk-bed.jpg",
+      category: "bedroom" as Category,
     },
     {
       title: t.kitchenCabinets,
       description: t.kitchenCabinetsDesc,
       image: "/gallery/kitchen-mint-cabinets.jpg",
+      category: "kitchen" as Category,
     },
     {
       title: t.bathroomVanity,
       description: t.bathroomVanityDesc,
       image: "/gallery/bathroom-vanity-mint.jpg",
+      category: "bathroom" as Category,
     },
     {
       title: t.bedStorage,
       description: t.bedStorageDesc,
       image: "/gallery/bed-storage-drawer.jpg",
+      category: "bedroom" as Category,
     },
     {
       title: t.tallWardrobe,
       description: t.tallWardrobeDesc,
       image: "/gallery/tall-wardrobe.jpg",
+      category: "storage" as Category,
     },
     {
       title: t.cuttingBoards,
       description: t.cuttingBoardsDesc,
       image: "/gallery/cutting-boards.jpg",
+      category: "accessories" as Category,
     },
     {
       title: t.kitchenDrawers,
       description: t.kitchenDrawersDesc,
       image: "/gallery/kitchen-drawers-mint.jpg",
+      category: "kitchen" as Category,
     },
     {
       title: t.bunkBedWhite,
       description: t.bunkBedWhiteDesc,
       image: "/gallery/bunk-bed-white.jpg",
+      category: "bedroom" as Category,
     },
   ]
+
+  const filters: { key: Category; label: string }[] = [
+    { key: "all", label: t.filterAll },
+    { key: "kitchen", label: t.filterKitchen },
+    { key: "bedroom", label: t.filterBedroom },
+    { key: "bathroom", label: t.filterBathroom },
+    { key: "storage", label: t.filterStorage },
+    { key: "accessories", label: t.filterAccessories },
+  ]
+
+  const filteredItems =
+    activeFilter === "all" ? portfolioItems : portfolioItems.filter((item) => item.category === activeFilter)
 
   return (
     <section id="portfolio" className="py-24 px-4 bg-muted/30">
@@ -65,8 +89,25 @@ export function Portfolio() {
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-balance">{t.portfolioTitle}</h2>
         </div>
 
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {filters.map((filter) => (
+            <button
+              key={filter.key}
+              onClick={() => setActiveFilter(filter.key)}
+              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+                activeFilter === filter.key
+                  ? "bg-primary text-primary-foreground shadow-lg"
+                  : "bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {filter.label}
+            </button>
+          ))}
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {portfolioItems.map((item, index) => (
+          {filteredItems.map((item, index) => (
             <div 
               key={index} 
               className="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer"
@@ -104,13 +145,13 @@ export function Portfolio() {
           </button>
 
           {/* Navigation Buttons */}
-          {portfolioItems.length > 1 && (
+          {filteredItems.length > 1 && (
             <>
               <button
                 className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10"
                 onClick={(e) => {
                   e.stopPropagation()
-                  setSelectedIndex((prev) => prev !== null && prev > 0 ? prev - 1 : portfolioItems.length - 1)
+                  setSelectedIndex((prev) => prev !== null && prev > 0 ? prev - 1 : filteredItems.length - 1)
                 }}
                 aria-label="Previous"
               >
@@ -120,7 +161,7 @@ export function Portfolio() {
                 className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10"
                 onClick={(e) => {
                   e.stopPropagation()
-                  setSelectedIndex((prev) => prev !== null && prev < portfolioItems.length - 1 ? prev + 1 : 0)
+                  setSelectedIndex((prev) => prev !== null && prev < filteredItems.length - 1 ? prev + 1 : 0)
                 }}
                 aria-label="Next"
               >
@@ -132,16 +173,16 @@ export function Portfolio() {
           {/* Image */}
           <div className="max-w-5xl max-h-[90vh] w-full flex flex-col items-center">
             <img
-              src={portfolioItems[selectedIndex].image}
-              alt={portfolioItems[selectedIndex].title}
+              src={filteredItems[selectedIndex].image}
+              alt={filteredItems[selectedIndex].title}
               className="max-w-full max-h-[80vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
             <div className="mt-4 text-white text-center">
-              <h3 className="text-2xl font-semibold mb-2">{portfolioItems[selectedIndex].title}</h3>
-              <p className="text-white/80">{portfolioItems[selectedIndex].description}</p>
+              <h3 className="text-2xl font-semibold mb-2">{filteredItems[selectedIndex].title}</h3>
+              <p className="text-white/80">{filteredItems[selectedIndex].description}</p>
               <p className="text-white/60 text-sm mt-2">
-                {selectedIndex + 1} / {portfolioItems.length}
+                {selectedIndex + 1} / {filteredItems.length}
               </p>
             </div>
           </div>
