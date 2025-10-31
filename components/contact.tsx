@@ -1,0 +1,134 @@
+"use client"
+
+import type React from "react"
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Phone, Mail, MapPin } from "lucide-react"
+import { useLocale } from "@/lib/locale-context"
+import { getTranslation } from "@/lib/i18n"
+
+export function Contact() {
+  const { locale } = useLocale()
+  const t = getTranslation(locale)
+
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log("Form submitted:", formData)
+    alert(
+      locale === "he"
+        ? "תודה על פנייתך! ניצור איתך קשר בקרוב."
+        : locale === "en"
+          ? "Thank you for your inquiry! We will contact you soon."
+          : "Спасибо за обращение! Мы свяжемся с вами в ближайшее время.",
+    )
+    setFormData({ name: "", phone: "", email: "", message: "" })
+  }
+
+  return (
+    <section id="contact" className="py-24 px-4">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-light mb-6 text-balance">{t.contactTitle}</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">{t.contactSubtitle}</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <Input
+                  placeholder={t.name}
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                  className="font-mono"
+                />
+              </div>
+              <div>
+                <Input
+                  type="tel"
+                  placeholder={t.phone}
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
+                  className="font-mono"
+                />
+              </div>
+              <div>
+                <Input
+                  type="email"
+                  placeholder={t.email}
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                  className="font-mono"
+                />
+              </div>
+              <div>
+                <Textarea
+                  placeholder={t.message}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                  rows={6}
+                  className="font-mono resize-none"
+                />
+              </div>
+              <Button type="submit" size="lg" className="w-full">
+                {t.send}
+              </Button>
+            </form>
+          </div>
+
+          <div className="space-y-8">
+            <div>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-1">{t.phone}</p>
+                    <p className="text-muted-foreground font-mono whitespace-pre-line">{t.phoneValue}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-1">{t.email}</p>
+                    <p className="text-muted-foreground font-mono">{t.emailValue}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-1">{t.address}</p>
+                    <p className="text-muted-foreground">{t.addressValue}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <h4 className="font-semibold mb-3">{t.hours}</h4>
+              <p className="text-muted-foreground">{t.hoursValue}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
