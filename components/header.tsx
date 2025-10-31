@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { useLocale } from "@/lib/locale-context"
 import { getTranslation } from "@/lib/i18n"
 import Image from "next/image"
@@ -59,12 +60,14 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center gap-2">
+            <ThemeToggle />
             <LanguageSwitcher />
             <Button onClick={() => scrollToSection("contact")}>{t.consultation}</Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <LanguageSwitcher />
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2" aria-label="Toggle menu">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
