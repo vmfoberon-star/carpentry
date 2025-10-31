@@ -6,6 +6,7 @@ import { Services } from "@/components/services"
 import { Portfolio } from "@/components/portfolio"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Portfolio />
       <Contact />
       <Footer />
+      <WhatsAppFloat />
     </main>
   )
 }
