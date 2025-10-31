@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
+import { Testimonials } from "@/components/testimonials"
 import { Services } from "@/components/services"
 import { Portfolio } from "@/components/portfolio"
 import { Contact } from "@/components/contact"
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <Testimonials />
       <Services />
       <Portfolio />
       <Contact />

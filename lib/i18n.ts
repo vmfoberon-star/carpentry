@@ -37,6 +37,18 @@ export const translations = {
     projects: "פרויקטים שהושלמו",
     clients: "לקוחות מרוצים",
 
+    // Testimonials
+    testimonialsTitle: "מה הלקוחות שלנו אומרים",
+    testimonial1Name: "שרה כהן",
+    testimonial1Role: "לקוחה פרטית",
+    testimonial1Text: "הזמנתי ארונית מהסדנה והיא יצאה מדהימה! איכות גבוהה, תשומת לב לפרטים, ומקצועיות בכל שלב. ממליצה בחום!",
+    testimonial2Name: "דוד לוי",
+    testimonial2Role: "בעל בית",
+    testimonial2Text: "הם שיקמו לי שולחן ישן של סבתא. עכשיו הוא נראה כמו חדש אבל עם כל הקסם של הישן. פשוט מושלם!",
+    testimonial3Name: "מיכל אברהם",
+    testimonial3Role: "לקוחה מרוצה",
+    testimonial3Text: "סט מטבח מותאם אישית - חלום שהתגשם! המקצועיות, הזמינות, והתוצאה הסופית עולים על כל הציפיות.",
+
     // Services
     servicesTitle: "השירותים שלנו",
     customFurniture: "רהיטים בהזמנה אישית",
@@ -103,6 +115,18 @@ export const translations = {
     experience: "Years of Experience",
     projects: "Completed Projects",
     clients: "Satisfied Clients",
+
+    // Testimonials
+    testimonialsTitle: "What Our Customers Say",
+    testimonial1Name: "Sarah Cohen",
+    testimonial1Role: "Private Client",
+    testimonial1Text: "I ordered a wardrobe from the workshop and it came out amazing! High quality, attention to detail, and professionalism at every step. Highly recommend!",
+    testimonial2Name: "David Levi",
+    testimonial2Role: "Homeowner",
+    testimonial2Text: "They restored my grandmother's old table. Now it looks like new but with all the charm of the old one. Simply perfect!",
+    testimonial3Name: "Michal Avraham",
+    testimonial3Role: "Happy Customer",
+    testimonial3Text: "Custom kitchen set - a dream come true! The professionalism, availability, and final result exceed all expectations.",
 
     // Services
     servicesTitle: "Our Services",
@@ -173,6 +197,18 @@ export const translations = {
     experience: "Лет опыта",
     projects: "Завершённых проектов",
     clients: "Довольных клиентов",
+
+    // Testimonials
+    testimonialsTitle: "Что говорят наши клиенты",
+    testimonial1Name: "Сара Коэн",
+    testimonial1Role: "Частный клиент",
+    testimonial1Text: "Заказала шкаф в мастерской — получилось потрясающе! Высокое качество, внимание к деталям и профессионализм на каждом этапе. Очень рекомендую!",
+    testimonial2Name: "Давид Леви",
+    testimonial2Role: "Владелец дома",
+    testimonial2Text: "Они восстановили старый стол моей бабушки. Теперь он выглядит как новый, но со всем очарованием старого. Просто идеально!",
+    testimonial3Name: "Михаэль Авраам",
+    testimonial3Role: "Довольный клиент",
+    testimonial3Text: "Кухонный гарнитур по индивидуальному заказу — мечта сбылась! Профессионализм, доступность и конечный результат превзошли все ожидания.",
 
     // Services
     servicesTitle: "Наши услуги",
