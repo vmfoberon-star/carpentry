@@ -4,6 +4,7 @@ import { About } from "@/components/about"
 import { Testimonials } from "@/components/testimonials"
 import { TrustBadges } from "@/components/trust-badges"
 import { Services } from "@/components/services"
+import { PricingCalculator } from "@/components/pricing-calculator"
 import { Process } from "@/components/process"
 import { Portfolio } from "@/components/portfolio"
 import { Contact } from "@/components/contact"
@@ -19,6 +20,7 @@ export default function Home() {
       <Testimonials />
       <TrustBadges />
       <Services />
+      <PricingCalculator />
       <Process />
       <Portfolio />
       <Contact />

@@ -152,6 +152,19 @@ export const translations = {
     badgeProfessionalism: "100% מקצועי",
     badgeCertified: "מוסמך",
 
+    // Pricing Calculator
+    calculatorTitle: "הערכת מחיר מהירה",
+    calculatorSubtitle: "קבלו הערכה ראשונית עבור הפרויקט שלכם",
+    selectFurnitureType: "סוג רהיט",
+    selectMaterial: "סוג עץ",
+    enterDimensions: "מידות (ס\"מ)",
+    length: "אורך",
+    width: "רוחב",
+    height: "גובה",
+    estimatedPrice: "הערכת מחיר משוערת",
+    disclaimer: "המחיר הינו הערכה ראשונית בלבד. לקבלת הצעת מחיר מדויקת, צרו קשר לקביעת פגישת ייעוץ.",
+    calculate: "חשב מחיר",
+
     // Footer
     footerText: "ברנע - סדנת נגרות משפחתית. החיים הם אמנות, אנחנו יוצרים אותה.",
     quickLinks: "קישורים מהירים",
@@ -300,6 +313,19 @@ export const translations = {
     badgeHappyClients: "Satisfied",
     badgeProfessionalism: "100% Professional",
     badgeCertified: "Certified",
+
+    // Pricing Calculator
+    calculatorTitle: "Quick Price Estimate",
+    calculatorSubtitle: "Get an initial estimate for your project",
+    selectFurnitureType: "Furniture Type",
+    selectMaterial: "Wood Type",
+    enterDimensions: "Dimensions (cm)",
+    length: "Length",
+    width: "Width",
+    height: "Height",
+    estimatedPrice: "Estimated Price",
+    disclaimer: "This is a preliminary estimate only. Contact us for a detailed quote and consultation.",
+    calculate: "Calculate Price",
 
     // Footer
     footerText: "Barnea - Family carpentry workshop. Life is art, we make it.",
@@ -450,6 +476,19 @@ export const translations = {
     badgeHappyClients: "Довольных",
     badgeProfessionalism: "100% Профессионализм",
     badgeCertified: "Сертифицировано",
+
+    // Pricing Calculator
+    calculatorTitle: "Быстрая оценка стоимости",
+    calculatorSubtitle: "Получите предварительную оценку для вашего проекта",
+    selectFurnitureType: "Тип мебели",
+    selectMaterial: "Вид дерева",
+    enterDimensions: "Размеры (см)",
+    length: "Длина",
+    width: "Ширина",
+    height: "Высота",
+    estimatedPrice: "Предварительная стоимость",
+    disclaimer: "Это только предварительная оценка. Свяжитесь с нами для получения детального коммерческого предложения и консультации.",
+    calculate: "Рассчитать стоимость",
 
     // Footer
     footerText: "Барнеа - Семейная столярная мастерская. Жизнь — это искусство, мы его создаём.",
