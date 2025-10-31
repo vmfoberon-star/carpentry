@@ -5,6 +5,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 import { getTranslation } from "@/lib/i18n"
@@ -17,6 +18,8 @@ export function Contact() {
     name: "",
     phone: "",
     email: "",
+    projectType: "",
+    budgetRange: "",
     message: "",
   })
 
@@ -33,10 +36,10 @@ export function Contact() {
     
     const emailBody = 
       locale === "he"
-        ? `שלום,\n\nפנייה חדשה מהאתר:\n\nשם: ${formData.name}\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\n\nהודעה:\n${formData.message}`
+        ? `שלום,\n\nפנייה חדשה מהאתר:\n\nשם: ${formData.name}\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\n${formData.projectType ? `סוג פרויקט: ${formData.projectType}\n` : ''}${formData.budgetRange ? `טווח תקציב: ${formData.budgetRange}\n` : ''}\nהודעה:\n${formData.message}`
         : locale === "en"
-          ? `Hello,\n\nNew inquiry from the website:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-          : `Здравствуйте,\n\nНовое обращение с сайта:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\n\nСообщение:\n${formData.message}`
+          ? `Hello,\n\nNew inquiry from the website:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n${formData.projectType ? `Project Type: ${formData.projectType}\n` : ''}${formData.budgetRange ? `Budget Range: ${formData.budgetRange}\n` : ''}\nMessage:\n${formData.message}`
+          : `Здравствуйте,\n\nНовое обращение с сайта:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\n${formData.projectType ? `Тип проекта: ${formData.projectType}\n` : ''}${formData.budgetRange ? `Бюджет: ${formData.budgetRange}\n` : ''}\nСообщение:\n${formData.message}`
     
     // Open email client
     const emailUrl = `mailto:barneawoodworking@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
@@ -51,7 +54,7 @@ export function Contact() {
             ? "Thank you for your inquiry! Email sent. We will contact you soon."
             : "Спасибо за обращение! Email отправлен. Мы свяжемся с вами в ближайшее время.",
       )
-      setFormData({ name: "", phone: "", email: "", message: "" })
+      setFormData({ name: "", phone: "", email: "", projectType: "", budgetRange: "", message: "" })
     }, 500)
   }
 
@@ -61,10 +64,10 @@ export function Contact() {
     // Format message for WhatsApp
     const whatsappMessage = 
       locale === "he"
-        ? `שלום! הגעתי דרך האתר שלכם.\n\nשם: ${formData.name}\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\n\nהודעה:\n${formData.message}`
+        ? `שלום! הגעתי דרך האתר שלכם.\n\nשם: ${formData.name}\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\n${formData.projectType ? `סוג פרויקט: ${formData.projectType}\n` : ''}${formData.budgetRange ? `טווח תקציב: ${formData.budgetRange}\n` : ''}\nהודעה:\n${formData.message}`
         : locale === "en"
-          ? `Hello! I came through your website.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-          : `Здравствуйте! Я узнал о вас через ваш сайт.\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\n\nСообщение:\n${formData.message}`
+          ? `Hello! I came through your website.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n${formData.projectType ? `Project Type: ${formData.projectType}\n` : ''}${formData.budgetRange ? `Budget Range: ${formData.budgetRange}\n` : ''}\nMessage:\n${formData.message}`
+          : `Здравствуйте! Я узнал о вас через ваш сайт.\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\n${formData.projectType ? `Тип проекта: ${formData.projectType}\n` : ''}${formData.budgetRange ? `Бюджет: ${formData.budgetRange}\n` : ''}\nСообщение:\n${formData.message}`
     
     // Open WhatsApp with pre-filled message
     const whatsappPhone = "972545758003" // Eyal's phone in international format
@@ -111,6 +114,33 @@ export function Contact() {
                   required
                   className="font-mono"
                 />
+              </div>
+              <div>
+                <Select value={formData.projectType} onValueChange={(value) => setFormData({ ...formData, projectType: value })}>
+                  <SelectTrigger className="w-full font-mono">
+                    <SelectValue placeholder={t.projectTypePlaceholder} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value={t.projectTypeCustom}>{t.projectTypeCustom}</SelectItem>
+                    <SelectItem value={t.projectTypeRestoration}>{t.projectTypeRestoration}</SelectItem>
+                    <SelectItem value={t.projectTypeElectrical}>{t.projectTypeElectrical}</SelectItem>
+                    <SelectItem value={t.projectTypeAccessories}>{t.projectTypeAccessories}</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div>
+                <Select value={formData.budgetRange} onValueChange={(value) => setFormData({ ...formData, budgetRange: value })}>
+                  <SelectTrigger className="w-full font-mono">
+                    <SelectValue placeholder={t.budgetRangePlaceholder} />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value={t.budgetRangeUnder}>{t.budgetRangeUnder}</SelectItem>
+                    <SelectItem value={t.budgetRange5_10}>{t.budgetRange5_10}</SelectItem>
+                    <SelectItem value={t.budgetRange10_20}>{t.budgetRange10_20}</SelectItem>
+                    <SelectItem value={t.budgetRange20_50}>{t.budgetRange20_50}</SelectItem>
+                    <SelectItem value={t.budgetRangeOver}>{t.budgetRangeOver}</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
               <div>
                 <Textarea
