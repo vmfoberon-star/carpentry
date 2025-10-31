@@ -1,0 +1,29 @@
+{
+  "name": "Barnea Carpentry Workshop",
+  "short_name": "Barnea",
+  "description": "Custom handcrafted wooden furniture | רהיטים בהזמנה אישית מעץ | Изделия из дерева на заказ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c6f57",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/barnea-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "shopping"],
+  "lang": "he",
+  "dir": "rtl",
+  "screenshots": [
+    {
+      "src": "/carpenter-working-with-wood-in-workshop.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg"
+    }
+  ]
+}
+

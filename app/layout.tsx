@@ -21,6 +21,21 @@ export const metadata: Metadata = {
   title: "Carpentry Workshop | סדנת נגרות | Столярная Мастерская",
   description: "Custom handcrafted wooden furniture | רהיטים בהזמנה אישית מעץ | Изделия из дерева на заказ",
   generator: "v0.app",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Barnea",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Barnea Carpentry Workshop",
+    title: "Barnea Carpentry Workshop | סדנת נגרות ברנע",
+    description: "Custom handcrafted wooden furniture | רהיטים בהזמנה אישית מעץ",
+  },
 }
 
 export default function RootLayout({
