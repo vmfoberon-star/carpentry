@@ -5,7 +5,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin } from "lucide-react"
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react"
 import { useLocale } from "@/lib/locale-context"
 import { getTranslation } from "@/lib/i18n"
 
@@ -24,6 +24,20 @@ export function Contact() {
     e.preventDefault()
     console.log("Form submitted:", formData)
     
+    // Show confirmation (standard form submission)
+    alert(
+      locale === "he"
+        ? "תודה על פנייתך! ניצור איתך קשר בקרוב."
+        : locale === "en"
+          ? "Thank you for your inquiry! We will contact you soon."
+          : "Спасибо за обращение! Мы свяжемся с вами в ближайшее время.",
+    )
+    setFormData({ name: "", phone: "", email: "", message: "" })
+  }
+
+  const handleWhatsApp = (e: React.MouseEvent) => {
+    e.preventDefault()
+    
     // Format message for WhatsApp
     const whatsappMessage = 
       locale === "he"
@@ -36,16 +50,6 @@ export function Contact() {
     const whatsappPhone = "972545758003" // Eyal's phone in international format
     const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(whatsappMessage)}`
     window.open(whatsappUrl, '_blank')
-    
-    // Show confirmation
-    alert(
-      locale === "he"
-        ? "תודה על פנייתך! נפתחת אפליקציית WhatsApp לקבלת ההודעה שלך."
-        : locale === "en"
-          ? "Thank you for your inquiry! WhatsApp will open to send your message."
-          : "Спасибо за обращение! WhatsApp откроется для отправки вашего сообщения.",
-    )
-    setFormData({ name: "", phone: "", email: "", message: "" })
   }
 
   return (
@@ -98,9 +102,21 @@ export function Contact() {
                   className="font-mono resize-none"
                 />
               </div>
-              <Button type="submit" size="lg" className="w-full">
-                {t.send}
-              </Button>
+              <div className="flex gap-4">
+                <Button type="submit" size="lg" className="flex-1">
+                  {t.send}
+                </Button>
+                <Button 
+                  type="button" 
+                  size="lg" 
+                  variant="outline" 
+                  onClick={handleWhatsApp}
+                  className="flex-1"
+                >
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  {t.sendWhatsApp}
+                </Button>
+              </div>
             </form>
           </div>
 
