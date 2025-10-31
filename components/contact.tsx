@@ -23,15 +23,36 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Show confirmation (standard form submission)
-    alert(
+    // Create email with form data
+    const emailSubject = 
       locale === "he"
-        ? "תודה על פנייתך! ניצור איתך קשר בקרוב."
+        ? "פנייה חדשה מסדנת ברנע"
         : locale === "en"
-          ? "Thank you for your inquiry! We will contact you soon."
-          : "Спасибо за обращение! Мы свяжемся с вами в ближайшее время.",
-    )
-    setFormData({ name: "", phone: "", email: "", message: "" })
+          ? "New inquiry from Barnea Woodworking"
+          : "Новое обращение из мастерской Барнеа"
+    
+    const emailBody = 
+      locale === "he"
+        ? `שלום,\n\nפנייה חדשה מהאתר:\n\nשם: ${formData.name}\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\n\nהודעה:\n${formData.message}`
+        : locale === "en"
+          ? `Hello,\n\nNew inquiry from the website:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+          : `Здравствуйте,\n\nНовое обращение с сайта:\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\n\nСообщение:\n${formData.message}`
+    
+    // Open email client
+    const emailUrl = `mailto:barneawoodworking@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
+    window.location.href = emailUrl
+    
+    // Show confirmation
+    setTimeout(() => {
+      alert(
+        locale === "he"
+          ? "תודה על פנייתך! דוא״ל נשלח. ניצור איתך קשר בקרוב."
+          : locale === "en"
+            ? "Thank you for your inquiry! Email sent. We will contact you soon."
+            : "Спасибо за обращение! Email отправлен. Мы свяжемся с вами в ближайшее время.",
+      )
+      setFormData({ name: "", phone: "", email: "", message: "" })
+    }, 500)
   }
 
   const handleWhatsApp = (e: React.MouseEvent) => {
