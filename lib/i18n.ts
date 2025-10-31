@@ -97,6 +97,20 @@ export const translations = {
     confirmBooking: "אישור הזמנה",
     bookingNote: "אחרי האישור תועברו ל-WhatsApp לפרטים נוספים",
 
+    // Process Timeline
+    processTitle: "איך אנחנו עובדים",
+    processSubtitle: "מפגישה ראשונה עד מוצר סופי מושלם",
+    step1Title: "ייעוץ",
+    step1Desc: "פגישה וירטואלית או פנים אל פנים, הבנת הצרכים וההעדפות שלך",
+    step2Title: "עיצוב והצעת מחיר",
+    step2Desc: "עיצוב מותאם אישית, חומרים וצבעים - הכל לפי הטעם שלך",
+    step3Title: "אישור",
+    step3Desc: "סקירה ואישור הסופי של העיצוב והמחיר",
+    step4Title: "ייצור",
+    step4Desc: "תקופת בנייה עם עדכונים שוטפים על התקדמות הפרויקט",
+    step5Title: "משלוח",
+    step5Desc: "התקנה והסברים על תחזוקה וטיפול",
+
     // Footer
     footerText: "ברנע - סדנת נגרות משפחתית. החיים הם אמנות, אנחנו יוצרים אותה.",
     quickLinks: "קישורים מהירים",
@@ -190,6 +204,20 @@ export const translations = {
     pickDate: "Click to pick a date",
     confirmBooking: "Confirm Booking",
     bookingNote: "After confirmation, you'll be redirected to WhatsApp for details",
+
+    // Process Timeline
+    processTitle: "How We Work",
+    processSubtitle: "From first meeting to perfect final product",
+    step1Title: "Consultation",
+    step1Desc: "Virtual or in-person meeting, understanding your needs and preferences",
+    step2Title: "Design & Quote",
+    step2Desc: "Custom design, materials, and colors - everything to your taste",
+    step3Title: "Approval",
+    step3Desc: "Review and final approval of design and pricing",
+    step4Title: "Crafting",
+    step4Desc: "Build period with regular updates on project progress",
+    step5Title: "Delivery",
+    step5Desc: "Installation and care instructions",
 
     // Footer
     footerText: "Barnea - Family carpentry workshop. Life is art, we make it.",
@@ -285,6 +313,20 @@ export const translations = {
     pickDate: "Нажмите для выбора даты",
     confirmBooking: "Подтвердить запись",
     bookingNote: "После подтверждения вы будете перенаправлены в WhatsApp для уточнения деталей",
+
+    // Process Timeline
+    processTitle: "Как мы работаем",
+    processSubtitle: "От первой встречи до идеального результата",
+    step1Title: "Консультация",
+    step1Desc: "Виртуальная или личная встреча, понимание ваших потребностей",
+    step2Title: "Дизайн и смета",
+    step2Desc: "Индивидуальный дизайн, материалы и цвета - всё по вашему вкусу",
+    step3Title: "Утверждение",
+    step3Desc: "Просмотр и окончательное утверждение дизайна и стоимости",
+    step4Title: "Изготовление",
+    step4Desc: "Период создания с регулярными обновлениями о прогрессе",
+    step5Title: "Доставка",
+    step5Desc: "Установка и инструкции по уходу",
 
     // Footer
     footerText: "Барнеа - Семейная столярная мастерская. Жизнь — это искусство, мы его создаём.",
