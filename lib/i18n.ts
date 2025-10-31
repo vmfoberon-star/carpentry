@@ -48,6 +48,7 @@ export const translations = {
     testimonial3Name: "מיכל אברהם",
     testimonial3Role: "לקוחה מרוצה",
     testimonial3Text: "סט מטבח מותאם אישית - חלום שהתגשם! המקצועיות, הזמינות, והתוצאה הסופית עולים על כל הציפיות.",
+    viewAllReviews: "צפה בכל הביקורות",
 
     // Services
     servicesTitle: "השירותים שלנו",
@@ -127,6 +128,7 @@ export const translations = {
     testimonial3Name: "Michal Avraham",
     testimonial3Role: "Happy Customer",
     testimonial3Text: "Custom kitchen set - a dream come true! The professionalism, availability, and final result exceed all expectations.",
+    viewAllReviews: "View All Reviews",
 
     // Services
     servicesTitle: "Our Services",
@@ -209,6 +211,7 @@ export const translations = {
     testimonial3Name: "Михаэль Авраам",
     testimonial3Role: "Довольный клиент",
     testimonial3Text: "Кухонный гарнитур по индивидуальному заказу — мечта сбылась! Профессионализм, доступность и конечный результат превзошли все ожидания.",
+    viewAllReviews: "Все отзывы",
 
     // Services
     servicesTitle: "Наши услуги",
