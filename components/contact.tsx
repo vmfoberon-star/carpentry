@@ -23,12 +23,27 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Form submitted:", formData)
+    
+    // Format message for WhatsApp
+    const whatsappMessage = 
+      locale === "he"
+        ? `שלום! הגעתי דרך האתר שלכם.\n\nשם: ${formData.name}\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\n\nהודעה:\n${formData.message}`
+        : locale === "en"
+          ? `Hello! I came through your website.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+          : `Здравствуйте! Я узнал о вас через ваш сайт.\n\nИмя: ${formData.name}\nТелефон: ${formData.phone}\nEmail: ${formData.email}\n\nСообщение:\n${formData.message}`
+    
+    // Open WhatsApp with pre-filled message
+    const whatsappPhone = "972545758003" // Eyal's phone in international format
+    const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(whatsappMessage)}`
+    window.open(whatsappUrl, '_blank')
+    
+    // Show confirmation
     alert(
       locale === "he"
-        ? "תודה על פנייתך! ניצור איתך קשר בקרוב."
+        ? "תודה על פנייתך! נפתחת אפליקציית WhatsApp לקבלת ההודעה שלך."
         : locale === "en"
-          ? "Thank you for your inquiry! We will contact you soon."
-          : "Спасибо за обращение! Мы свяжемся с вами в ближайшее время.",
+          ? "Thank you for your inquiry! WhatsApp will open to send your message."
+          : "Спасибо за обращение! WhatsApp откроется для отправки вашего сообщения.",
     )
     setFormData({ name: "", phone: "", email: "", message: "" })
   }
