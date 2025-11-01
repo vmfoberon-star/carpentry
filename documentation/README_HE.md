@@ -87,7 +87,7 @@
 - **שעות פעילות**:
   - א'-ה': 9:00-18:00
   - ו': 9:00-14:00
-- **כתובת**: רחוב הנגרים 15, תל אביב
+- **כתובת**: א.ת סלעית
 - **Google Maps** עם ניווט
 
 #### 10. תחתית (Footer)
@@ -342,7 +342,8 @@ npx vercel ls
 - **README_HE.md** - קובץ זה (עברית)
 - **SECURITY.md** - אבטחה
 - **DEPLOYMENT_INFO.md** - פרסום
-- **WHATSAPP_GUIDE.md** - עבודה עם WhatsApp
+- **WHATSAPP_GUIDE.md** - עבודה עם WhatsApp (רוסית)
+- **WHATSAPP_GUIDE_HE.md** - עבודה עם WhatsApp (עברית)
 - **EMAIL_NOTIFICATIONS.md** - אימייל (רוסית)
 - **EMAIL_NOTIFICATIONS_HE.md** - אימייל (עברית)
 - **GOOGLE_ANALYTICS_SETUP.md** - אנליטיקה
@@ -390,7 +391,7 @@ npx vercel ls
 - **דניאל סרביאנסקי**: 050-6905039
 - **אייל ונטורה**: 054-5758003
 - **אימייל**: barneawoodworking@gmail.com
-- **כתובת**: רחוב הנגרים 15, תל אביב
+- **כתובת**: א.ת סלעית
 - **שעות**: א'-ה' 9:00-18:00, ו' 9:00-14:00
 
 ## 📝 רישיון

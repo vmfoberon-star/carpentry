@@ -198,7 +198,7 @@ export function Contact() {
                   <div>
                     <p className="font-semibold mb-1">{t.address}</p>
                     <a 
-                      href="https://www.google.com/maps/search/?api=1&query=רחוב+הנגרים+15,+תל+אביב"
+                      href="https://www.google.com/maps/search/?api=1&query=א.ת+סלעית"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors underline"
@@ -223,7 +223,7 @@ export function Contact() {
             <h3 className="text-2xl font-light">{t.mapTitle || "Find Us"}</h3>
             <Button variant="outline" size="sm" asChild>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=רחוב+הנגרים+15,+תל+אביב"
+                href="https://www.google.com/maps/dir/?api=1&destination=א.ת+סלעית"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -233,7 +233,7 @@ export function Contact() {
           </div>
           <div className="w-full h-96 rounded-lg overflow-hidden border border-border shadow-lg">
             <iframe
-              src="https://www.google.com/maps?q=רחוב+הנגרים+15,+תל+אביב&output=embed"
+              src="https://www.google.com/maps?q=א.ת+סלעית&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

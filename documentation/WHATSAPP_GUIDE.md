@@ -129,7 +129,7 @@ Message: [Сообщение]
 
 **WhatsApp**: 054-5758003
 **Email**: barneawoodworking@gmail.com
-**Адрес**: רחוב הנגרים 15, תל אביב
+**Адрес**: א.ת סלעית
 
 ## 🆘 Проблемы?
 
