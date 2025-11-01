@@ -30,13 +30,28 @@
 - תמונות לקוחות
 - אנימציית גלילה
 
-#### 4. השירותים שלנו (Services)
+#### 4. תגי אמון (Trust Badges)
+- **20+ שנים** ניסיון
+- **100% איכות** מובטח
+- **300+ לקוחות** מרוצים
+- **100% מקצועיות** מאומת
+- אנימציה בגלילה
+
+#### 5. השירותים שלנו (Services)
 - רהיטים בהזמנה אישית
 - שיקום רהיטים
 - פריטי פנים
 - עבודות חשמל
 
-#### 5. איך אנחנו עובדים (Process Timeline)
+#### 6. מחשבון מחירים (Pricing Calculator)
+- הערכת עלות אינטראקטיבית
+- בחירת סוג רהיט (שולחן, כיסא, ארון, מיטה וכו')
+- בחירת סוג עץ (אלון, אורן, אגוז, ארז)
+- הזנת מידות (אורך, רוחב, גובה)
+- חישוב אוטומטי של עלות ראשונית
+- התנצלות על צורך בייעוץ
+
+#### 7. איך אנחנו עובדים (Process Timeline)
 - **5 שלבים** מייעוץ ועד משלוח:
   1. ייעוץ
   2. עיצוב והצעת מחיר
@@ -45,18 +60,24 @@
   5. משלוח
 - הצגה חזותית עם אייקונים
 
-#### 6. תיק העבודות (Portfolio)
+#### 8. תיק העבודות (Portfolio)
 - **גלריית Lightbox**:
   - צפייה במסך מלא
   - ניווט בין תמונות
   - מעברים יפים
-- דוגמאות עבודות:
-  - שולחן אוכל מעץ אלון
-  - ספרייה בהזמנה אישית
-  - סט מטבח
+- **פילטרים לפי קטגוריות**:
+  - כל העבודות
+  - מטבח
+  - חדר שינה
+  - אמבטיה
+  - אחסון
+  - אביזרים
+- דוגמאות עבודות (9+ תמונות)
 
-#### 7. צור קשר (Contact)
-- **טופס יצירת קשר**:
+#### 9. צור קשר (Contact)
+- **טופס יצירת קשר מורחב**:
+  - סוג פרויקט (תפריט נפתח)
+  - טווח תקציב (תפריט נפתח)
   - שליחה באימייל (פותח תיבת דואר)
   - שליחה דרך WhatsApp
 - **פרטי התקשרות**:
@@ -69,15 +90,26 @@
 - **כתובת**: רחוב הנגרים 15, תל אביב
 - **Google Maps** עם ניווט
 
-#### 8. תחתית (Footer)
+#### 10. תחתית (Footer)
 - קישורים מהירים לכל הסעיפים
 - קישור לאינסטגרם
 - פרטי התקשרות
 
-#### 9. אייקון צ'אט WhatsApp צף
+#### 11. אייקון צ'אט WhatsApp צף
 - כפתור ירוק בפינה הימנית התחתונה
 - גלוי תמיד בגלילה
 - גישה מהירה לצ'אט
+
+#### 12. ערכת נושא כהה/בהירה
+- מתג בכותרת האתר
+- שמירת בחירת המשתמש
+- מעברים חלקים
+
+#### 13. Progressive Web App (PWA)
+- אפשרות התקנה בטלפון
+- סמל על שולחן העבודה
+- עבודה ללא אינטרנט (מטמון)
+- חוויה כמו אפליקציה מקורית
 
 ## 🛠 סטק טכני
 
@@ -95,6 +127,7 @@
 - **אנליטיקה**: Vercel Analytics
 - **Google Analytics**: מוכן לחיבור
 - **אחסון**: Vercel CDN
+- **PWA**: תמיכה בהתקנה במכשירים ניידים
 
 ## 🚀 התחלה מהירה
 
@@ -310,7 +343,8 @@ npx vercel ls
 - **SECURITY.md** - אבטחה
 - **DEPLOYMENT_INFO.md** - פרסום
 - **WHATSAPP_GUIDE.md** - עבודה עם WhatsApp
-- **EMAIL_NOTIFICATIONS.md** - אימייל
+- **EMAIL_NOTIFICATIONS.md** - אימייל (רוסית)
+- **EMAIL_NOTIFICATIONS_HE.md** - אימייל (עברית)
 - **GOOGLE_ANALYTICS_SETUP.md** - אנליטיקה
 - **VIDEO_INTEGRATION.md** - וידאו
 - **FEATURE_RECOMMENDATIONS.md** - המלצות
