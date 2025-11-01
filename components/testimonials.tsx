@@ -121,7 +121,7 @@ export function Testimonials() {
             className="gap-2"
           >
             <a
-              href="#"
+              href="https://www.instagram.com/barnea_woodworking?igsh=MW4zODZsaHhqb3U0ZA%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
             >
