@@ -342,7 +342,8 @@ npx vercel ls
 - **README_HE.md** - קובץ זה (עברית)
 - **SECURITY.md** - אבטחה
 - **DEPLOYMENT_INFO.md** - פרסום
-- **WHATSAPP_GUIDE.md** - עבודה עם WhatsApp
+- **WHATSAPP_GUIDE.md** - עבודה עם WhatsApp (רוסית)
+- **WHATSAPP_GUIDE_HE.md** - עבודה עם WhatsApp (עברית)
 - **EMAIL_NOTIFICATIONS.md** - אימייל (רוסית)
 - **EMAIL_NOTIFICATIONS_HE.md** - אימייל (עברית)
 - **GOOGLE_ANALYTICS_SETUP.md** - אנליטיקה

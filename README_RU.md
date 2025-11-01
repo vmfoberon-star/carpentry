@@ -342,7 +342,8 @@ npx vercel ls
 - **README_HE.md** - Иврит
 - **SECURITY.md** - Безопасность
 - **DEPLOYMENT_INFO.md** - Деплой
-- **WHATSAPP_GUIDE.md** - Работа с WhatsApp
+- **WHATSAPP_GUIDE.md** - Работа с WhatsApp (Russian)
+- **WHATSAPP_GUIDE_HE.md** - Работа с WhatsApp (Hebrew)
 - **EMAIL_NOTIFICATIONS.md** - Email (Russian)
 - **EMAIL_NOTIFICATIONS_HE.md** - Email (Hebrew)
 - **GOOGLE_ANALYTICS_SETUP.md** - Аналитика
